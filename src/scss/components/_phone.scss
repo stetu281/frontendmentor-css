@@ -1,0 +1,14 @@
+.phone {
+  margin-top: 4rem;
+  width: 80%;
+  max-width: 270px;
+  aspect-ratio: 9 / 18.5;
+  background-color: $white;
+  border-radius: 1.5rem;
+  box-shadow: 0 7px 25px 5px rgba($des-dark-violet, 0.3);
+
+  @include breakpoint(768px) {
+    margin-top: unset;
+    transform: translateX(1rem);
+  }
+}

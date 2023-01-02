@@ -1,11 +1,12 @@
 .bg {
   display: block;
   width: 500px;
-  height: 80vh;
+  height: 85vh;
   position: fixed;
   z-index: -5;
 
   &__left {
+    height: 50vh;
     background-image: linear-gradient($light-magenta, $light-violet);
     left: -300px;
     border-radius: 0 0 300px 300px;
@@ -25,6 +26,7 @@
     }
 
     &__left {
+      height: 85vh;
       left: -10%;
     }
   }
