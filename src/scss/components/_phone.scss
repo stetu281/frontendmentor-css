@@ -2,7 +2,7 @@
   margin-top: 4rem;
   width: 80%;
   max-width: 270px;
-  aspect-ratio: 9 / 18.5;
+  aspect-ratio: 9 / 19;
   background-color: $white;
   border-radius: 1.5rem;
   box-shadow: 0 7px 25px 5px rgba($des-dark-violet, 0.3);
@@ -12,7 +12,7 @@
 
   &__screen {
     width: 92%;
-    aspect-ratio: 9 / 19.185;
+    aspect-ratio: 9 / 19.7;
     background-color: $bg;
     border-radius: 1rem;
     overflow: hidden;
@@ -187,7 +187,73 @@
     }
   }
 
+  &__input {
+    margin: 1.25rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 94%;
+    padding: 0.25rem 0.25rem 0.25rem 1.25rem;
+    background-color: $white;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    color: $gray-blue;
+  }
+
+  &__inputButton {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    background-color: $button-bg;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    span {
+      width: 10px;
+      height: 3px;
+      display: block;
+      background-color: $white;
+      position: absolute;
+      transform-origin: right center;
+      border-radius: 10px;
+
+      &:nth-child(1) {
+        transform: rotate(45deg) translateX(1px);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg) translateX(1px);
+      }
+    }
+  }
+
   @include breakpoint(768px) {
     margin-top: unset;
+
+    &__profileName {
+      h2 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+    }
+
+    &__profileImg {
+      width: 32px;
+    }
+
+    &__chatbox {
+      font-size: 0.6rem;
+    }
+
+    &__imageBox {
+      img {
+        width: 50px;
+      }
+    }
   }
 }
