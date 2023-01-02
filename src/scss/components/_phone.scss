@@ -9,6 +9,5 @@
 
   @include breakpoint(768px) {
     margin-top: unset;
-    transform: translateX(1rem);
   }
 }
