@@ -6,6 +6,99 @@
   background-color: $white;
   border-radius: 1.5rem;
   box-shadow: 0 7px 25px 5px rgba($des-dark-violet, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__screen {
+    width: 92%;
+    aspect-ratio: 9 / 19.185;
+    background-color: $bg;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &__header {
+    background-image: linear-gradient(to right, $light-violet, $light-magenta);
+    border-radius: 0 0 0.5rem 0.5rem;
+    position: relative;
+  }
+
+  &__notch {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -5px;
+    margin: auto;
+    width: 60%;
+    height: 20px;
+    background-color: $white;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__headerContent {
+    padding: 2rem 1rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__back {
+    span {
+      display: block;
+      width: 7px;
+      height: 2px;
+      background-color: $white;
+      border-radius: 5px;
+      transform-origin: left center;
+
+      &:nth-child(1) {
+        transform: rotate(-60deg) translateX(-2px);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(60deg) translateX(-2px);
+      }
+    }
+  }
+
+  &__profileImg {
+    margin-left: 0.125rem;
+    width: 26px;
+    border-radius: 100%;
+    border: 1px solid $white;
+  }
+
+  &__profileName {
+    margin-left: 0.75rem;
+    color: $white;
+
+    h2 {
+      font-size: 0.75rem;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 0.5rem;
+      color: $pale-violet;
+    }
+  }
+
+  &__menu {
+    span {
+      margin: 1px 0;
+      display: block;
+      width: 3px;
+      aspect-ratio: 1 / 1;
+      background-color: $white;
+      border-radius: 5px;
+    }
+  }
 
   @include breakpoint(768px) {
     margin-top: unset;
