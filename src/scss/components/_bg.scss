@@ -1,0 +1,31 @@
+.bg {
+  display: block;
+  width: 500px;
+  height: 80vh;
+  position: fixed;
+  z-index: -5;
+
+  &__left {
+    background-image: linear-gradient($light-magenta, $light-violet);
+    left: -300px;
+    border-radius: 0 0 300px 300px;
+  }
+
+  &__right {
+    display: none;
+    background-color: lighten($light-violet, 35%);
+    bottom: 0;
+    border-radius: 300px 300px 0 0;
+  }
+
+  @include breakpoint(768px) {
+    &__right {
+      display: block;
+      right: -15%;
+    }
+
+    &__left {
+      left: -10%;
+    }
+  }
+}
